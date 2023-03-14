@@ -1,0 +1,42 @@
+//Selecione o database
+use('dogWalker')
+
+// Remove a collection
+db.usuarios.drop()
+
+//Insere um novo registro (para testes, utilize o arquivo na pasta http)
+db.usuarios.insertOne({
+    'nome': 'Maria Alves',
+    'email': 'mariaalves@uol.com',
+    'senha': '123Mudar',
+    'ativo': true,
+    'tipo': 'Cliente',
+    'avatar': 'https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=Maria+Gusmão'
+})
+
+//Criando o índice único
+db.usuarios.createIndex({ 'email': 1 }, { unique: true })
+
+//Lista todos os registros
+db.usuarios.find()
+
+//Lista um registro pelo Id
+db.usuarios.find({ '_id': { $eq: ObjectId('61891d38a64a453659f55c56') } })
+
+//Lista um registro por parte do nome (i=insensitive case)
+db.usuarios.find({ nome: { $regex: 'alves', $options: "i" } })
+
+//Ocultando a coluna senha da listagem
+db.usuarios.find({}, { senha: 0 })
+
+//Lista um usuário a partir do seu email
+db.usuarios.find({ email: { $eq: 'mariaalves@uol.com' } })
+
+//Lista um usuário a partir de parte do seu email ou nome
+db.usuarios.find({
+      $or:
+      [
+       {nome: { $regex: 'alguém', $options: "i" } },
+       {email: { $regex: 'uol', $options: "i" } }
+      ]
+      })
