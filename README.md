@@ -32,14 +32,21 @@ yarn add swagger-ui-express
 ```json
  "engines": {
     "node": "16.x",
-    "npm": "8.x"
+    "npm": "9.x"
   }
 ```
 - Dentro da chave scripts do arquivo ```package.json``` defina o start:
 ```json
 "scripts": {
-    "start": "node index.js",
+    "start": "node ./api/index.js",
 ```    
+- Crie na pasta raiz um arquivo chamado ```verce.json``` com o conteúdo a seguir:
+```json
+{
+    "version": 2,
+    "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]    
+}
+```
 - Acesse o (Vercel)[https://vercel.com/signup] e faça o login com a sua conta do Github
 - Importe o projeto desejado que será exibido na lista do Github
 - Na área de Environment Variables, recorte e cole o seu arquivo .env
