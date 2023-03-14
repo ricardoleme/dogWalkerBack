@@ -29,4 +29,5 @@ yarn add swagger-ui-express
 - Importe o projeto desejado que será exibido na lista do Github
 - Na área de Environment Variables, recorte e cole o seu arquivo .env
 - Clique em Deploy e apaixone-se ♥️😃 pelo Vercel 
+- A cada novo push no seu repositório GIT ele automaticamente fará novamente o deploy.
 
