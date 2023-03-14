@@ -43,7 +43,7 @@ app.use('/api/geo', rotasGeo)
 /* Rota do upload */
 app.use('/upload', rotaUpload)
 
-app.use('/doc', swaggerUI.serve, swaggerUI.setup(JSON.parse(fs.readFileSync('./api/swagger/swagger_output.json'))))
+app.use('/doc', swaggerUI.serve, swaggerUI.setup(JSON.parse(fs.readFileSync('./swagger/swagger_output.json'))))
 
 // Rota para tratar exceções - 404 (Deve ser a última rota SEMPRE) 
 app.use(function (req, res) {
