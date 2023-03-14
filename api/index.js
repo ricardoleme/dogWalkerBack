@@ -1,5 +1,5 @@
 import express from 'express'
-import fs from 'fs'
+//import fs from 'fs'
 import cors from 'cors'
 import rotasUsuarios from './routes/usuarios.js'
 import rotasGeo from './routes/geo.js'
@@ -10,8 +10,7 @@ import rotasPrestadores from './routes/prestadores.js'
 const app = express();
 const port = process.env.PORT || 4000
 
-import swaggerUI from 'swagger-ui-express'
-
+//import swaggerUI from 'swagger-ui-express'
 
 app.use(cors()) //Habilita o CORS-Cross-origin resource sharing
 app.use(express.urlencoded({ extended: true }));
@@ -43,7 +42,8 @@ app.use('/api/geo', rotasGeo)
 /* Rota do upload */
 app.use('/upload', rotaUpload)
 
-app.use('/doc', swaggerUI.serve, swaggerUI.setup(JSON.parse(fs.readFileSync('./swagger/swagger_output.json'))))
+/* Rota de Documentação do projeto */
+//app.use('/doc', swaggerUI.serve, swaggerUI.setup(JSON.parse(fs.readFileSync('./swagger/swagger_output.json'))))
 
 // Rota para tratar exceções - 404 (Deve ser a última rota SEMPRE) 
 app.use(function (req, res) {
