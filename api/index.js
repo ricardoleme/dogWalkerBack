@@ -24,6 +24,8 @@ app.use('/', express.static('public'))
 
 // Definimos a nossa rota default
 app.get('/api', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
   res.status(200).json({
     message: 'API Dog Walker - 100% funcional!🐕👏',
     version: '1.0.1'
