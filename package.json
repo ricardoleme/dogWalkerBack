@@ -1,5 +1,5 @@
 {
-  "name": "backendads",
+  "name": "dogwalkerback",
   "version": "1.0.0",
   "description": "NodeJS API integrated with MongoDB (without Mongoose) ",
   "type": "module",
@@ -42,6 +42,6 @@
   },
   "engines": {
     "node": "16.x",
-    "npm": "8.x"
+    "npm": "9.x"
   }
 }
