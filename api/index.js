@@ -2,7 +2,7 @@ const app = require('express')();
 
 app.get('/api', (req, res) => {
 
-  const path = `/api/item/${v4()}`;
+  const path = `/api/item/45`;
 
   res.setHeader('Content-Type', 'text/html');
 
