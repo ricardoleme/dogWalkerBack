@@ -52,4 +52,7 @@ https://dog-walker-back.vercel.app/
 No seu projeto, caso precise ver erros no deploy, informe:
 url_projeto/_logs
 
-Exemplo: https://dog-walker-back.vercel.app/_logs
+Exemplo: https://dog-walker-back.vercel.app/_logs (somente o Owner do projeto pode ver)
+
+Se preferir, faça o deploy diretamente no Vercel deste projeto.
+ [![Faça o Deploy com Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ricardoleme/dogWalkerBack)
