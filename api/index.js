@@ -1,8 +1,5 @@
 const app = require('express')();
 
-import { v4 } from 'uuid';
-
-
 app.get('/api', (req, res) => {
 
   const path = `/api/item/${v4()}`;
