@@ -2,8 +2,12 @@
     "version": 2,
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "src": "/api/(.*)",
+            "dest": "/api"
+        },
+        {
+            "src": "/doc/(.*)",
+            "dest": "/doc"
         }
     ]
   }
