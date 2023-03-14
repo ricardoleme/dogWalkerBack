@@ -46,3 +46,10 @@ yarn add swagger-ui-express
 - Clique em Deploy e apaixone-se ♥️😃 pelo Vercel 
 - A cada novo push no seu repositório GIT ele automaticamente fará novamente o deploy.👏👏
 
+## Acesse o deploy da API
+https://dog-walker-back.vercel.app/
+
+No seu projeto, caso precise ver erros no deploy, informe:
+url_projeto/_logs
+
+Exemplo: https://dog-walker-back.vercel.app/_logs
